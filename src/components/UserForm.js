@@ -73,8 +73,8 @@ const UserForm = ({ values , touched , errors , ...props }) => {
         name='tos'
         checked={values.tos}
         />
-        I accept the <a href="#">Terms of Service</a>.
-        {FieldErrorMessage ('tos')}
+        <label htmlFor="tos">I accept the <a href="#">Terms of Service</a>.
+        {FieldErrorMessage ('tos')}</label>
       </div>
       <div className='form-item'>
         <button type='submit'>Submit</button>
