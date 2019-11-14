@@ -18,5 +18,10 @@ const UserForm = (props) => {
   );
 };
 
+const FormikUserForm = withFormik ({
+  mapPropsToValues ({ values }) {
+  },
+});
+
 /**************************************/
-export default UserForm;
+export default FormikUserForm;
