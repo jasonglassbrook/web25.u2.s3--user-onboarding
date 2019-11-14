@@ -49,6 +49,7 @@ const UserForm = ({ values , touched , errors , ...props }) => {
         name='name'
         placeholder='Name'
         />
+        {FieldErrorMessage ('name')}
       </div>
       <div className='form-item'>
         <Field
@@ -56,6 +57,7 @@ const UserForm = ({ values , touched , errors , ...props }) => {
         name='email'
         placeholder='user@domain.tld'
         />
+        {FieldErrorMessage ('email')}
       </div>
       <div className='form-item'>
         <Field
@@ -63,6 +65,7 @@ const UserForm = ({ values , touched , errors , ...props }) => {
         name='password'
         placeholder='Password'
         />
+        {FieldErrorMessage ('password')}
       </div>
       <div className='form-item'>
         <Field
@@ -71,6 +74,7 @@ const UserForm = ({ values , touched , errors , ...props }) => {
         checked={values.tos}
         />
         I accept the <a href="#">Terms of Service</a>.
+        {FieldErrorMessage ('tos')}
       </div>
       <div className='form-item'>
         <button type='submit'>Submit</button>
