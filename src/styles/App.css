@@ -12,16 +12,36 @@ html , body , .root , .App {
 }
 
 /***************************************
-  UserForm
+  generics
 ***************************************/
-.user-form {
+
+.App > section {
+  width: 100%;
+  padding: 16px;
+}
+
+.card {
   background: White;
   box-shadow: 0 0 8px Black;
 
-  margin: 16px auto;
-  width: 400px;
   border-radius: 16px;
   padding: 16px;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/***************************************
+  UserForm
+***************************************/
+
+.user-form.card {
+  margin: 16px auto;
+  width: 400px;
 }
 
 .form-item {
@@ -56,12 +76,7 @@ input[type="checkbox"] + label {
   UsersList
 ***************************************/
 
-.users-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-
+.users-list.card-deck {
   margin-top: 16px;
   padding: 8px;
 }
@@ -70,16 +85,11 @@ input[type="checkbox"] + label {
   UserCard
 ***************************************/
 
-.user-card {
-  background: White;
-  box-shadow: 0 0 8px Black;
-  
+.user.card {
   margin: 8px;
   width: 400px;
-  border-radius: 16px;
-  padding: 16px;
 }
 
-.user-card > .name {
+.user.card > .name {
   font-weight: bold;
 }
