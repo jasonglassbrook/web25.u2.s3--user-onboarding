@@ -36,7 +36,7 @@ const ErrorMessage = (touched , errors) => (name) => (
 /***************************************
   COMPONENT
 ***************************************/
-const UserForm = ({ values , touched , errors , ...props }) => {
+const UserForm = ({ values , touched , errors , addUser , ...props }) => {
   /// effects ///
   const FieldErrorMessage = ErrorMessage (touched , errors);
 

@@ -6,6 +6,7 @@ import React from 'react';
 
 /// internal modules ///
 import UserForm from './components/UserForm';
+import UsersList from './components/UsersList';
 
 /// styles ///
 import './styles/App.css';
@@ -21,7 +22,8 @@ const init = {};
 function App () {
   return (
     <div className="App">
-      <UserForm/>
+      <UserForm addUser={undefined}/>
+      <UsersList users={[]}/>
     </div>
   );
 }
