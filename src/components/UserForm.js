@@ -72,6 +72,21 @@ const FormikUserForm = withFormik ({
     'password' : values.password || init.password.default,
     'tos'      : values.tos      || init.tos.default,
   }),
+  validationSchema : Yup.object ().shape ({
+    'name'     : Yup.string ()
+      .required ('You must provide your name.')
+      .trim (),
+    'email'    : Yup.string ()
+      .required ('You must provide your email.')
+      .email ('That email address is not valid.'),
+    'password' : Yup.string ()
+      .required ('You must provide a password.')
+      .min (init.password.min_length, `Your password must be no less than ${init.password.min_length} characters long.`)
+      .max (init.password.max_length, `Your password must be no more than ${init.password.max_length} characters long.`),
+    'tos'      : Yup.boolean ()
+      .required ('You must choose whether to accept the Terms of Service.')
+      .oneOf ([true] , 'You must accept the Terms of Service.'),
+  }),
 }) (UserForm);
 
 /**************************************/
