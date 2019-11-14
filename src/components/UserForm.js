@@ -37,6 +37,9 @@ const showError = (touched , errors) => (name) => (
   COMPONENT
 ***************************************/
 const UserForm = ({ values , ...props }) => {
+  /// effects ///
+
+  /// thing ///
   return (
     <Form>
       <div className='form-item'>
