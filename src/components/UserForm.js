@@ -2,7 +2,7 @@
 import React from 'react';
 import { withFormik , Form , Field } from 'formik';
 import * as Yup from 'yup';
-// import axios from 'axios';
+import axios from 'axios';
 
 /***************************************
   STATES
@@ -105,6 +105,22 @@ const FormikUserForm = withFormik ({
       .required ('You must choose whether to accept the Terms of Service.')
       .oneOf ([true] , 'You must accept the Terms of Service.'),
   }),
+  handleSubmit : (values, { resetForm, setSubmitting }) => {
+    axios
+      .post ("https://reqres.in/api/users" , values)
+      .then ((response) => {
+        console.log ('--- success! ---')
+        console.log (response);
+        resetForm ();
+      })
+      .catch ((error) => {
+        console.log ('--- failure! ---')
+        console.log (error);
+      })
+      .finally (() => {
+        setSubmitting (false);
+      });
+  }
 }) (UserForm);
 
 /**************************************/
