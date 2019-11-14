@@ -25,6 +25,15 @@ const init = {
 };
 
 /***************************************
+  EFFECTS
+***************************************/
+const showError = (touched , errors) => (name) => (
+  touched[name] && errors[name] && (
+    <p className='form-item-error'>{errors[name]}</p>
+  )
+);
+
+/***************************************
   COMPONENT
 ***************************************/
 const UserForm = ({ values , ...props }) => {
