@@ -17,6 +17,7 @@ const init = {
   'password' : {
     'default'    : '',
     'min_length' : 16,
+    'max_length' : 128,
   },
   'tos' : {
     'default' : false,
