@@ -1,12 +1,6 @@
 /// external modules ///
 import React from 'react';
 
-/// internal modules ///
-import Form from './components/Form';
-
-/// styles ///
-import './styles/App.css';
-
 /***************************************
   STATES
 ***************************************/
@@ -15,12 +9,11 @@ const init = {};
 /***************************************
   COMPONENT
 ***************************************/
-function App () {
+const Form = (props) => {
   return (
-    <div className="App">
-    </div>
+    <div></div>
   );
-}
+};
 
 /**************************************/
-export default App;
+export default Form;
