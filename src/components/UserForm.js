@@ -7,7 +7,12 @@ import { withFormik , Form , Field } from 'formik';
 /***************************************
   STATES
 ***************************************/
-const init = {};
+const init = {
+  'name'     : '',
+  'email'    : '',
+  'password' : '',
+  'tos'      : false,
+};
 
 /***************************************
   COMPONENT
@@ -52,10 +57,10 @@ const UserForm = ({ values , ...props }) => {
 
 const FormikUserForm = withFormik ({
   mapPropsToValues : (values) => ({
-    'name'     : values.name     || '',
-    'email'    : values.email    || '',
-    'password' : values.password || '',
-    'tos'      : values.tos      || false,
+    'name'     : values.name     || init.name,
+    'email'    : values.email    || init.email,
+    'password' : values.password || init.password,
+    'tos'      : values.tos      || init.tos,
   }),
 }) (UserForm);
 
