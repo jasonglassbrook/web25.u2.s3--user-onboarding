@@ -20,6 +20,11 @@ html , body , .root , .App {
   padding: 16px;
 }
 
+.App > section > header {
+  color: White;
+  text-align: center;
+}
+
 .card {
   background: White;
   box-shadow: 0 0 8px Black;
