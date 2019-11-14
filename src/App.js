@@ -14,16 +14,20 @@ import './styles/App.css';
 /***************************************
   STATES
 ***************************************/
-const init = {};
+const init = {
+  'users' : [],
+};
 
 /***************************************
   COMPONENT
 ***************************************/
 function App () {
+  const [users , setUsers] = React.useState (init.users);
+
   return (
     <div className="App">
       <UserForm addUser={undefined}/>
-      <UsersList users={[]}/>
+      <UsersList users={users}/>
     </div>
   );
 }
