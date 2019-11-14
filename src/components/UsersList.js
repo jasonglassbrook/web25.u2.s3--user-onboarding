@@ -10,7 +10,7 @@ import UserCard from './UserCard';
 const UsersList = ({ users , ...props }) => (
   <div className='users-list'>
     {users.map ((user) => (
-      <UserCard data={user}/>
+      <UserCard key={user.createdAt + user.id} data={user}/>
     ))}
   </div>
 );
