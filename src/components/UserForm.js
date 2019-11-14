@@ -57,6 +57,7 @@ const UserForm = ({ values , ...props }) => {
         name='tos'
         checked={values.tos}
         />
+        I accept the <a href="#">Terms of Service</a>.
       </div>
       <div className='form-item'>
         <button type='submit'>Submit</button>
