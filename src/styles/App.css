@@ -15,7 +15,9 @@ html , body , .root , .App {
   UserForm
 ***************************************/
 .user-form {
-  box-shadow: 0 0 8px #bbb;
+  background: White;
+  box-shadow: 0 0 8px Black;
+
   margin: 16px auto;
   width: 400px;
   border-radius: 16px;
@@ -54,6 +56,26 @@ input[type="checkbox"] + label {
   UsersList
 ***************************************/
 
+.users-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 16px;
+  padding: 8px;
+}
+
 /***************************************
   UserCard
 ***************************************/
+
+.user-card {
+  background: White;
+  box-shadow: 0 0 8px Black;
+  
+  margin: 8px;
+  width: 400px;
+  border-radius: 16px;
+  padding: 16px;
+}
