@@ -10,7 +10,7 @@ import UserCard from './UserCard';
 const UsersList = ({ users , ...props }) => (
   <section id='users-list'>
     <header>
-      <h2>Users</h2>
+      <h2>Current Users</h2>
     </header>
     <main>
       <ul className="users-list card-deck">
