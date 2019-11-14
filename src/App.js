@@ -19,6 +19,8 @@ const init = {
 };
 
 const addUser = (setUsers) => (newUser) => {
+  /* TESTING */ console.log ('--- adding new user ---');
+  /* TESTING */ console.log (newUser);
   setUsers ((users) => ([
     ...users,
     newUser,
