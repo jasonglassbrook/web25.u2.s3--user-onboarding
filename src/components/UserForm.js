@@ -36,7 +36,9 @@ const ErrorMessage = (touched , errors) => (name) => (
 /***************************************
   COMPONENT
 ***************************************/
-const UserForm = ({ values , touched , errors , addUser , ...props }) => {
+const UserForm = ({ values , touched , errors , /* addUser ,*/ ...props }) => {
+  // /* TESTING */ console.log (addUser);
+  
   /// effects ///
   const FieldErrorMessage = ErrorMessage (touched , errors);
 
@@ -105,12 +107,13 @@ const FormikUserForm = withFormik ({
       .required ('You must choose whether to accept the Terms of Service.')
       .oneOf ([true] , 'You must accept the Terms of Service.'),
   }),
-  handleSubmit : (values, { resetForm, setSubmitting }) => {
+  handleSubmit : (values, { props : { addUser } , setSubmitting , resetForm }) => {
     axios
       .post ("https://reqres.in/api/users" , values)
       .then ((response) => {
         console.log ('--- success! ---')
         console.log (response);
+        addUser (response.data);
         resetForm ();
       })
       .catch ((error) => {
