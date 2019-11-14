@@ -1,6 +1,6 @@
 /// external modules ///
 import React from 'react';
-// import { withFormik , Form , Field } from 'formik';
+// import { withUserFormik , UserForm , Field } from 'Userformik';
 // import * as Yup from 'yup';
 // import axios from 'axios';
 
@@ -12,11 +12,11 @@ const init = {};
 /***************************************
   COMPONENT
 ***************************************/
-const Form = (props) => {
+const UserForm = (props) => {
   return (
     <div></div>
   );
 };
 
 /**************************************/
-export default Form;
+export default UserForm;

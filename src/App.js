@@ -5,7 +5,7 @@ import React from 'react';
 // import axios from 'axios';
 
 /// internal modules ///
-import Form from './components/Form';
+import UserForm from './components/UserForm';
 
 /// styles ///
 import './styles/App.css';
