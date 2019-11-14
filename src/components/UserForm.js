@@ -38,6 +38,7 @@ const ErrorMessage = (touched , errors) => (name) => (
 ***************************************/
 const UserForm = ({ values , touched , errors , ...props }) => {
   /// effects ///
+  const FieldErrorMessage = ErrorMessage (touched , errors);
 
   /// thing ///
   return (
