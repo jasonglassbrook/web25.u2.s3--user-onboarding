@@ -21,6 +21,7 @@ const init = {};
 function App () {
   return (
     <div className="App">
+      <UserForm/>
     </div>
   );
 }
