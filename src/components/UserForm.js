@@ -8,10 +8,19 @@ import * as Yup from 'yup';
   STATES
 ***************************************/
 const init = {
-  'name'     : '',
-  'email'    : '',
-  'password' : '',
-  'tos'      : false,
+  'name' : {
+    'default' : '',
+  },
+  'email' : {
+    'default' : '',
+  },
+  'password' : {
+    'default'    : '',
+    'min_length' : 16,
+  },
+  'tos' : {
+    'default' : false,
+  },
 };
 
 /***************************************
@@ -57,10 +66,10 @@ const UserForm = ({ values , ...props }) => {
 
 const FormikUserForm = withFormik ({
   mapPropsToValues : (values) => ({
-    'name'     : values.name     || init.name,
-    'email'    : values.email    || init.email,
-    'password' : values.password || init.password,
-    'tos'      : values.tos      || init.tos,
+    'name'     : values.name     || init.name.default,
+    'email'    : values.email    || init.email.default,
+    'password' : values.password || init.password.default,
+    'tos'      : values.tos      || init.tos.default,
   }),
 }) (UserForm);
 
