@@ -35,8 +35,25 @@ function App () {
 
   return (
     <div className="App">
-      <UserForm addUser={addUser (setUsers)}/>
-      <UsersList users={users}/>
+
+      <section id='user-form'>
+        <header>
+          <h2>New User Form</h2>
+        </header>
+        <main>
+          <UserForm addUser={addUser (setUsers)}/>
+        </main>
+      </section>
+
+      <section id='users-list'>
+        <header>
+          <h2>Current Users</h2>
+        </header>
+        <main>
+          <UsersList users={users}/>
+        </main>
+      </section>
+
     </div>
   );
 }
