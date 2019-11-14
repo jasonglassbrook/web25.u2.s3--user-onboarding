@@ -45,44 +45,49 @@ const UserForm = ({ values , touched , errors , /* addUser ,*/ ...props }) => {
   /// thing ///
   return (
     <section id='user-form'>
-      <Form className='user-form card'>
-        <div className='form-item'>
-          <Field
-          type='text'
-          name='name'
-          placeholder='Name'
-          />
-          {FieldErrorMessage ('name')}
-        </div>
-        <div className='form-item'>
-          <Field
-          type='email'
-          name='email'
-          placeholder='user@domain.tld'
-          />
-          {FieldErrorMessage ('email')}
-        </div>
-        <div className='form-item'>
-          <Field
-          type='password'
-          name='password'
-          placeholder='Password'
-          />
-          {FieldErrorMessage ('password')}
-        </div>
-        <div className='form-item'>
-          <Field
-          type='checkbox'
-          name='tos'
-          checked={values.tos}
-          />
-          <label htmlFor="tos">I accept the <a href="#">Terms of Service</a>.
-          {FieldErrorMessage ('tos')}</label>
-        </div>
-        <div className='form-item'>
-          <button type='submit'>Submit</button>
-        </div>
-      </Form>
+      <header>
+        <h2>New User Form</h2>
+      </header>
+      <main>
+        <Form className='user-form card'>
+          <div className='form-item'>
+            <Field
+            type='text'
+            name='name'
+            placeholder='Name'
+            />
+            {FieldErrorMessage ('name')}
+          </div>
+          <div className='form-item'>
+            <Field
+            type='email'
+            name='email'
+            placeholder='user@domain.tld'
+            />
+            {FieldErrorMessage ('email')}
+          </div>
+          <div className='form-item'>
+            <Field
+            type='password'
+            name='password'
+            placeholder='Password'
+            />
+            {FieldErrorMessage ('password')}
+          </div>
+          <div className='form-item'>
+            <Field
+            type='checkbox'
+            name='tos'
+            checked={values.tos}
+            />
+            <label htmlFor="tos">I accept the <a href="#">Terms of Service</a>.
+            {FieldErrorMessage ('tos')}</label>
+          </div>
+          <div className='form-item'>
+            <button type='submit'>Submit</button>
+          </div>
+        </Form>
+      </main>
     </section>
   );
 };

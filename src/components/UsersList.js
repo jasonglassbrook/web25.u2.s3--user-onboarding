@@ -9,14 +9,18 @@ import UserCard from './UserCard';
 ***************************************/
 const UsersList = ({ users , ...props }) => (
   <section id='users-list'>
-    <h2>Users</h2>
-    <ul className="users-list card-deck">
-      {users.map ((user) => (
-        <li key={user.createdAt + user.id} >
-          <UserCard data={user}/>
-        </li>
-      ))}
-    </ul>
+    <header>
+      <h2>Users</h2>
+    </header>
+    <main>
+      <ul className="users-list card-deck">
+        {users.map ((user) => (
+          <li key={user.createdAt + user.id} >
+            <UserCard data={user}/>
+          </li>
+        ))}
+      </ul>
+    </main>
   </section>
 );
 
