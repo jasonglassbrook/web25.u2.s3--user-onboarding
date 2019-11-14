@@ -51,8 +51,8 @@ const UserForm = ({ values , ...props }) => {
 };
 
 const FormikUserForm = withFormik ({
-  mapPropsToValues ({ values }) {
-  },
+  mapPropsToErrors : ({ values }) => ({
+  }),
 }) (UserForm);
 
 /**************************************/
