@@ -18,6 +18,13 @@ const init = {
   'users' : [],
 };
 
+const addUser = (setUsers) => (newUser) => {
+  setUsers ((users) => ([
+    ...users,
+    newUser,
+  ]));
+};
+
 /***************************************
   COMPONENT
 ***************************************/
@@ -26,7 +33,7 @@ function App () {
 
   return (
     <div className="App">
-      <UserForm addUser={undefined}/>
+      <UserForm addUser={addUser (setUsers)}/>
       <UsersList users={users}/>
     </div>
   );
