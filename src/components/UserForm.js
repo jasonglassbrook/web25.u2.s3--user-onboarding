@@ -51,7 +51,11 @@ const UserForm = ({ values , ...props }) => {
 };
 
 const FormikUserForm = withFormik ({
-  mapPropsToErrors : ({ values }) => ({
+  mapPropsToValues : (values) => ({
+    'name'     : values.name     || '',
+    'email'    : values.email    || '',
+    'password' : values.password || '',
+    'tos'      : values.tos      || false,
   }),
 }) (UserForm);
 
