@@ -27,7 +27,7 @@ html , body , .root , .App {
 
 .card {
   background: White;
-  box-shadow: 0 0 8px Black;
+  box-shadow: 0 0 8px rgba(0 , 0 , 0 , 50%);
 
   border-radius: 16px;
   padding: 16px;
