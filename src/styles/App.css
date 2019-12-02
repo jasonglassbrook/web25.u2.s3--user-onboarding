@@ -1,0 +1,100 @@
+/***************************************
+  App
+***************************************/
+
+html {
+  background: SeaGreen;
+}
+
+html , body , .root , .App {
+  height: 100%;
+  width: 100%;
+}
+
+/***************************************
+  generics
+***************************************/
+
+.App > section {
+  width: 100%;
+  padding: 16px;
+}
+
+.App > section > header {
+  color: White;
+  text-align: center;
+}
+
+.card {
+  background: White;
+  box-shadow: 0 0 8px rgba(0 , 0 , 0 , 50%);
+
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/***************************************
+  UserForm
+***************************************/
+
+.user-form.card {
+  margin: 16px auto;
+  width: 400px;
+}
+
+.form-item {
+  margin: 16px 0;
+}
+.form-item:first-child {
+  margin-top: 0;
+}
+.form-item:last-child {
+  margin-bottom: 0;
+}
+
+.form-item > input[type="text"] ,
+.form-item > input[type="email"] ,
+.form-item > input[type="password"] {
+  width: 100%;
+}
+
+input[type="checkbox"] + label {
+  padding-left: 0.5em;
+}
+
+.form-item > button {
+  width: 100%;
+}
+
+.form-item-error {
+  color: OrangeRed;
+}
+
+/***************************************
+  UsersList
+***************************************/
+
+.users-list.card-deck {
+  margin-top: 16px;
+  padding: 8px;
+}
+
+/***************************************
+  UserCard
+***************************************/
+
+.user.card {
+  margin: 8px;
+  width: 400px;
+}
+
+.user.card > .name {
+  font-weight: bold;
+}
